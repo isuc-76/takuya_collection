@@ -22,5 +22,7 @@ HP自体は既にあるが、機能の追加を試みたもの。
 ## 設計書
 https://docs.google.com/spreadsheets/d/1xwfw0Thm8rUpd7DYe3sHCDZpAPETC_ZHREWCr7eutjk/edit#gid=0
 
+https://app.diagrams.net/?mode=google&gfw=1#G1FTy2uPWCaH2dXUkR18Yi6Qnw11m37Ye-
+
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1ar_zrPkRTgjTRgsQqysuh_x0cVBP4Q4V2tPzrgAGKa4/edit?usp=sharing
