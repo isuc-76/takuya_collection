@@ -1,0 +1,51 @@
+
+<header>
+
+<% if admin_signed_in? %>
+
+	<ul class="header_top">
+		<li class="nav-list-item">
+			<%= link_to"ユーザー一覧", admin_users_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to"商品追加", new_admin_item_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to"商品一覧", admin_items_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to destroy_admin_session_path, method: :delete do %>ログアウト<% end %>
+		</li>
+	</ul>
+
+<% elsif user_signed_in? %>
+
+	<ul class="header_top">
+		<li class="nav-list-item">
+			<%= link_to"ユーザー詳細", user_user_path(current_user) %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to"標品一覧", user_items_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+		</li>
+	</ul>
+
+<% else %>
+
+	<ul class="header_top">
+		<li class="nav-list-item">
+			<%= link_to"標品一覧", user_items_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to"新規登録", new_user_registration_path %>
+		</li>
+		<li class="nav-list-item">
+			<%= link_to"ログイン", new_user_session_path %>
+		</li>
+	</ul>
+
+<% end %>
+
+</header>

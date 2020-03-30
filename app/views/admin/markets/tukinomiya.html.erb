@@ -4,11 +4,6 @@
 <h1>admin.tukinomiya</h1>
 
 
-<p>
-<%= link_to destroy_admin_session_path, method: :delete do %>ログアウト<% end %>
-</p>
-
-
 <%= form_for(@market,url:admin_market_path(@market)) do |f| %>
 <table>
 	<tr>
