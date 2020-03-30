@@ -1,0 +1,15 @@
+<div class="sidebar">
+
+<% if admin_signed_in? %>
+
+	<p><%= link_to"調宮骨董市", admin_tukinomiya_path %></p>
+	<p><%= link_to"香取骨董市", admin_katori_path %></p>
+
+<% else %>
+
+	<p><%= link_to"調宮骨董市", tukinomiya_path %></p>
+	<p><%= link_to"香取骨董市", katori_path %></p>
+
+<% end %>
+
+</div>

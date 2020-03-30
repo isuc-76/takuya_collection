@@ -1,0 +1,26 @@
+
+<%= render 'layouts/sidebar' %>
+
+
+<h1>tukinomiya</h1>
+
+<p>
+<%= link_to destroy_user_session_path, method: :delete do %>LOG OUT<% end %>
+</p>
+
+<table>
+	<tr>
+		<th>
+			<%= @tukinomiya.day %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<%= @tukinomiya.content %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+		</th>
+	</tr>
+</table>

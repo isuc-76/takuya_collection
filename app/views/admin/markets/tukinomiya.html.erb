@@ -1,0 +1,43 @@
+<%= render 'layouts/sidebar' %>
+
+
+<h1>admin.tukinomiya</h1>
+
+
+<p>
+<%= link_to destroy_admin_session_path, method: :delete do %>ログアウト<% end %>
+</p>
+
+
+<%= form_for(@market,url:admin_market_path(@market)) do |f| %>
+<table>
+	<tr>
+		<th>
+			<%= @market.day %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<%= f.label :開催日 %>
+			<%= f.text_area :day %>
+			<%= f.submit "編集" %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<%= @market.content %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<%= f.label :説明 %>
+			<%= f.text_area :content %>
+			<%= f.submit "編集" %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+		</th>
+	</tr>
+</table>
+<% end %>
