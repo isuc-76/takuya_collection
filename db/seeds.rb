@@ -8,11 +8,39 @@
 
 
 
-# Admin.create!(
-# 	[
-# 		{
-# 			smail:"takuya_collection@gmail.com",
-# 			password:"ta98509tion"
-# 		}
-# 	]
-# 	)
+Admin.create!(
+	[
+		{
+			email:"takuya_collection@gmail.com",
+			password:"ta98509tion"
+		}
+	]
+	)
+
+
+User.create!(
+	[
+		{
+			name:"テスト",
+			telephone_number:"000-0000-0000",
+			postal_code:"000-0000",
+			address:"滋賀",
+			email:"0@0",
+			password:"111111"
+		}
+	]
+	)
+
+
+Market.create!(
+	[
+		{
+			day:"4月25日",
+			content:"浦和"
+		},
+		{
+			day:"5月9日",
+			content:"越谷"
+		}
+	]
+	)

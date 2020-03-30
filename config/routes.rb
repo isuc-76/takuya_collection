@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
   	resources :users, only: [:index, :show]
   	resources :markets, only: [:update]
-  	# get "/tukinomiya" => "admin/markets#tukinomiya"
-  	# get "/katori" => "admin/markets#katori"
+
   	resources :items do
   		resources :item_answes, only: [:new, :create, :index, :edit, :update]
   	end
@@ -22,6 +21,8 @@ Rails.application.routes.draw do
 
   	# root "admin/stores#top"
   end
+      get "admin/tukinomiya" => "admin/markets#tukinomiya"
+      get "admin/katori" => "admin/markets#katori"
 
   namespace :user do
   	resources :users, only: [:show, :edit, :destroy]
@@ -29,13 +30,14 @@ Rails.application.routes.draw do
   		resources :item_questions, only: [:new, :create, :index]
   	end
   	resources :purchases, only: [:new, :create, :index, :show]
-  	get "/tukinomiya" => "user/markets#tukinomiya"
-  	get "/katori" => "user/markets#katori"
+
   	resources :stores, only: [:index]
-  	get "/about" => "user/stres#about"
+  	get "/about" => "user/stores#about"
 
   	root "user/stores#top"
   end
+      get "/tukinomiya" => "user/markets#tukinomiya"
+      get "/katori" => "user/markets#katori"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
