@@ -1,0 +1,25 @@
+
+
+<%= render 'layouts/sidebar' %>
+
+
+<h1>admin.store</h1>
+
+<%= form_for(@store,url:admin_store_path(@store)) do |f| %>
+<table>
+	<tr>
+		<th>
+			<%= @store.comment %>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<%= f.label :コメント %>
+			<%= f.text_area :comment %>
+			<%= f.submit "編集" %>
+		</th>
+	</tr>
+</table>
+<% end %>
+
+

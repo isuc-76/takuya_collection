@@ -44,3 +44,12 @@ Market.create!(
 		}
 	]
 	)
+
+
+Store.create!(
+	[
+		{
+			comment:"ようこそ"
+		}
+	]
+	)
