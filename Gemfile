@@ -84,3 +84,8 @@ gem 'rails-i18n'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 
+# MySQL
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
