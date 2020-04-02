@@ -1,0 +1,37 @@
+<div class="admin_user_show">
+
+	<table>
+		<tr>
+			<th>名前</th>
+			<td><%= @user.name %></td>
+		</tr>
+		<tr>
+			<th>電話番号</th>
+			<td><%= @user.telephone_number %></td>
+		</tr>
+		<tr>
+			<th>郵便番号</th>
+			<td><%= @user.postal_code %></td>
+		</tr>
+		<tr>
+			<th>住所</th>
+			<td><%= @user.address %></td>
+		</tr>
+		<tr>
+			<th>メールアドレス</th>
+			<td><%= @user.email %></td>
+		</tr>
+		<tr>
+			<th>会員ステータス</th>
+			<td>
+				<% if @user.user_status==true %>
+					<p>有効</p>
+				<% else %>
+					<P>退会済み</P>
+				<% end %>
+			</td>
+		</tr>
+	</table>
+
+
+</div>

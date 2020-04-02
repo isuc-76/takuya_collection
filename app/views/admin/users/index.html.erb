@@ -1,0 +1,29 @@
+
+
+<div class="admin_user_index">
+
+
+<table>
+	<tr>
+		<th>会員ID</th>
+		<th>名前</th>
+		<th>ステータス</th>
+	</tr>
+
+	<% @users.each do |user| %>
+	<tr>
+		<td><%= user.id %></td>
+		<td><%= link_to "#{user.name}", admin_user_path(user) %></td>
+		<td>
+			<% if user.user_status==true %>
+				<p>有効</p>
+			<% else %>
+				<P>退会済み</P>
+			<% end %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+
+</div>
