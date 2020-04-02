@@ -12,7 +12,7 @@ Admin.create!(
 	[
 		{
 			email:"takuya_collection@gmail.com",
-			password:"ta98509tion"
+			password:"000000"
 		}
 	]
 	)
@@ -24,9 +24,17 @@ User.create!(
 			name:"テスト",
 			telephone_number:"000-0000-0000",
 			postal_code:"000-0000",
-			address:"滋賀",
-			email:"0@0",
+			address:"千葉",
+			email:"1@1",
 			password:"111111"
+		},
+		{
+			name:"インド",
+			telephone_number:"222-2222-2222",
+			postal_code:"222-2222",
+			address:"滋賀",
+			email:"2@2",
+			password:"222222"
 		}
 	]
 	)

@@ -1,0 +1,33 @@
+
+
+<div class="mypege">
+
+
+<%= form_for(@user,url:user_user_path(@user)) do |f| %>
+	<table>
+		<tr>
+			<th>名前</th>
+			<td><%= f.text_area :name %></td>
+		</tr>
+		<tr>
+			<th>電話番号</th>
+			<td><%= f.text_area :telephone_number %></td>
+		</tr>
+		<tr>
+			<th>郵便番号</th>
+			<td><%= f.text_area :postal_code %></td>
+		</tr>
+		<tr>
+			<th>住所</th>
+			<td><%= f.text_area :address %></td>
+		</tr>
+		<tr>
+			<th>メールアドレス</th>
+			<td><%= f.text_area :email %></td>
+		</tr>
+	</table>
+	<%= f.submit "編集" %>
+<% end %>
+
+</div>
+
