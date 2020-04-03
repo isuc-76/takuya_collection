@@ -1,0 +1,30 @@
+
+
+<%= form_for @item, url: admin_item_path do |f| %>
+
+<table>
+	<tr>
+		<th>商品画像</th>
+	</tr>
+	<tr>
+		<td><%= f.attachment_field :image %></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<th><%= @item.item_name %></th>
+		<td><%= f.text_area :item_name %></td>
+	</tr>
+	<tr>
+		<th><%= @item.content %></th>
+		<td><%= f.text_area :content %></td>
+	</tr>
+	<tr>
+		<th><%= @item.price %></th>
+		<td><%= f.text_area :price %></td>
+	</tr>
+</table>
+<%= f.submit "保存" %>
+<% end %>
+
