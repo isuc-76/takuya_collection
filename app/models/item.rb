@@ -15,4 +15,7 @@ class Item < ApplicationRecord
 	has_one :purchase
     has_many :item_questions
 
+    attachment :image
+
+
 end
