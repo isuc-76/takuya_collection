@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   		resources :item_questions, only: [:new, :create, :index]
   	end
   	resources :purchases, only: [:new, :create, :index, :show]
+    get "purchase/thanks" => "purchases#thanks"
 
   	resources :stores, only: [:index]
 

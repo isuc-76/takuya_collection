@@ -1,0 +1,16 @@
+
+
+<table>
+	<tr>
+		<th>商品画像</th>
+		<th>名前</th>
+	</tr>
+
+	<% @purchases.each do |purchase| %>
+	<tr>
+		<td><%= attachment_image_tag purchase, :image, size: "100x100" %></td>
+		<td><%= link_to "#{purchase.item_name}", user_purchase_path(purchase) %></td>
+	</tr>
+	<% end %>
+</table>
+

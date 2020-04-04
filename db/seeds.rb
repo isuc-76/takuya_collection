@@ -61,3 +61,16 @@ Store.create!(
 		}
 	]
 	)
+
+
+Item.create!(
+	[
+		{
+			item_name:"強欲な壺",
+			content:"2枚ドロー",
+			image:Rails.root.join("app/assets/images/商品1.jpg").open,
+			price:500,
+			selling_status:true
+		}
+	]
+	)

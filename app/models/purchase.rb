@@ -1,6 +1,6 @@
 class Purchase < ApplicationRecord
 
-	validates :item_name, presence: true
+	# validates :item_name, presence: true
 
 	validates :transaction_status, presence: true
 	enum transaction_status:{
