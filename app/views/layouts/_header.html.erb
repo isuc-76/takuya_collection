@@ -3,6 +3,10 @@
 
 <% if admin_signed_in? %>
 
+	<p class="head-text">
+		<%= link_to"トップページ", admin_root_path %>
+	</p>
+
 	<ul class="header_top">
 		<li class="nav-list-item">
 			<%= link_to"ユーザー一覧", admin_users_path %>
@@ -20,6 +24,10 @@
 
 <% elsif user_signed_in? %>
 
+	<p class="head-text">
+		<%= link_to"トップページ", root_path %>
+	</p>
+
 	<ul class="header_top">
 		<li class="nav-list-item">
 			<%= link_to"ユーザー詳細", user_user_path(current_user) %>
@@ -33,6 +41,10 @@
 	</ul>
 
 <% else %>
+
+	<p class="head-text">
+		<%= link_to"トップページ", root_path %>
+	</p>
 
 	<ul class="header_top">
 		<li class="nav-list-item">
