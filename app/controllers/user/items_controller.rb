@@ -8,4 +8,17 @@ class User::ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 	end
 
+	# def update
+	# 	p "ステータス変更"
+	# 	item = Item.find(params[:id])
+	# 	item.save(item_params)
+	# end
+
+
+	private
+
+		# def item_params
+		# 	params.require(:item).permit(:selling_status)
+		# end
+
 end

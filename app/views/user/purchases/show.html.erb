@@ -1,0 +1,27 @@
+
+<h2>購入品詳細</h2>
+
+<table>
+	<tr>
+		<td><%= attachment_image_tag @purchase.item, :image, size: "200x200" %></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<th>名前</th>
+		<td><%= @purchase.item.item_name %></td>
+	</tr>
+	<tr>
+		<th>説明</th>
+		<td><%= @purchase.item.content %></td>
+	</tr>
+	<tr>
+		<th>値段</th>
+		<td><%= @purchase.item.price %></td>
+	</tr>
+	<tr>
+		<th>状態</th>
+		<td><%= @purchase.transaction_status %></td>
+	</tr>
+</table>

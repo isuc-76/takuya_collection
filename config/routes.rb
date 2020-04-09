@@ -19,18 +19,23 @@ Rails.application.routes.draw do
   		resources :item_answes, only: [:new, :create, :index, :edit, :update]
   	end
   	resources :purchases, only: [:index, :show, :update]
+       get "/purchase/kakutei" => "purchases#kakutei"
+       get "/purchase/seikyu" => "purchases#seikyu"
+       get "/purchase/nyukin" => "purchases#nyukin"
+       get "/purchase/hassouzumi" => "purchases#hassouzumi"
   	resources :stores, only: [:index, :update]
 
-  	root "stores#top"
+  	root "purchases#top"
   end
 
 
   namespace :user do
   	resources :users, only: [:show, :edit, :update, :destroy]
-  	resources :items, only: [:index, :show] do
+  	resources :items, only: [:index, :show, :update] do
   		resources :item_questions, only: [:new, :create, :index]
   	end
-  	resources :purchases, only: [:new, :create, :index, :show]
+  	resources :purchases, only: [:new, :create, :index, :show, :update]
+    get "purchase/thanks" => "purchases#thanks"
 
   	resources :stores, only: [:index]
 
