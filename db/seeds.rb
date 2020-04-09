@@ -71,6 +71,23 @@ Item.create!(
 			image:Rails.root.join("app/assets/images/商品1.jpg").open,
 			price:500,
 			selling_status:true
+		},
+		{
+			item_name:"強欲な瓶",
+			content:"1枚ドロー",
+			image:Rails.root.join("app/assets/images/商品2.jpg").open,
+			price:500,
+			selling_status:true
 		}
 	]
 	)
+
+
+# Purchase.create!(
+# 	[
+# 		{
+# 			user_id:1,
+# 			item_id:1
+# 		}
+# 	]
+# 	)

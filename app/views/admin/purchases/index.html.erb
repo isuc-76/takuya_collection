@@ -1,0 +1,20 @@
+
+
+<table>
+	<tr>
+		<th>商品ID</th>
+		<th>名前</th>
+		<th>状態</th>
+	</tr>
+
+	<% @purchases.each do |purchase| %>
+	<tr>
+		<td><%= purchase.item.id %></td>
+		<td><%= link_to "#{purchase.item.item_name}", admin_purchase_path(purchase) %></td>
+		<td>
+			<%= purchase.transaction_status %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+

@@ -89,3 +89,6 @@ gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
 end
+
+#デバッグ
+gem 'pry-byebug'

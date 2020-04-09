@@ -1,0 +1,21 @@
+<h1>admin.top</h1>
+
+<h3>購入確定商品
+<%= link_to @purchases.count(transaction_status=0),admin_purchase_kakutei_path %>
+件
+</h3>
+
+<h3>請求書発送中商品
+<%= link_to @purchases.count(transaction_status=1),admin_purchase_seikyu_path %>
+件
+</h3>
+
+<h3>入金確認商品
+<%= link_to @purchases.count(transaction_status=2),admin_purchase_nyukin_path %>
+件
+</h3>
+
+<h3>発送済み商品
+<%= link_to @purchases.count(transaction_status=3),admin_purchase_hassouzumi_path %>
+件
+</h3>

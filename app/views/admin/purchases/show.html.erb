@@ -1,4 +1,5 @@
 
+
 <h2>購入品詳細</h2>
 
 <table>
@@ -21,7 +22,17 @@
 		<td><%= @purchase.item.price %></td>
 	</tr>
 	<tr>
+		<th>購入者</th>
+		<td><%= @purchase.user.name %></td>
+	</tr>
+	<tr>
+		<%= form_for(@purchase,url:admin_purchase_path(@purchase)) do |f| %>
 		<th>状態</th>
-		<td><%= @purchase.transaction_status %></td>
+		<td>
+			<%= f.select :transaction_status, Purchase.transaction_statuses.keys, {} %>
+			<%= f.submit "更新" %>
+		</td>
+		<% end %>
 	</tr>
 </table>
+
