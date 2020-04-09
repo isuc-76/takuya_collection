@@ -12,7 +12,7 @@
 	<% @purchases.each do |purchase| %>
 	<tr>
 		<td><%= attachment_image_tag purchase.item, :image, size: "100x100" %></td>
-		<td><%= link_to "#{purchase.item.item_name}", user_purchase_path(purchase) %></td>
+		<td><%= link_to "#{purchase.item.item_name}", admin_purchase_path(purchase) %></td>
 		<td><%= purchase.transaction_status %></td>
 	</tr>
 	<% end %>
