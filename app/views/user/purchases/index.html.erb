@@ -1,0 +1,26 @@
+<% if @purchases.present? %>
+
+<h2>購入履歴一覧</h2>
+
+<table>
+	<tr>
+		<th>商品画像</th>
+		<th>名前</th>
+		<th>状態</th>
+	</tr>
+
+	<% @purchases.each do |purchase| %>
+	<tr>
+		<td><%= attachment_image_tag purchase.item, :image, size: "100x100" %></td>
+		<td><%= link_to "#{purchase.item.item_name}", admin_purchase_path(purchase) %></td>
+		<td><%= purchase.transaction_status %></td>
+	</tr>
+	<% end %>
+</table>
+
+<% else %>
+
+<h2>購入履歴はありません</h2>
+
+<% end %>
+
