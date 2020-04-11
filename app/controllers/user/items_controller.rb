@@ -15,7 +15,7 @@ class User::ItemsController < ApplicationController
 	# end
 
 
-	private
+	# private
 
 		# def item_params
 		# 	params.require(:item).permit(:selling_status)

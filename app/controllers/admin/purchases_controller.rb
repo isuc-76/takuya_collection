@@ -1,7 +1,11 @@
 class Admin::PurchasesController < ApplicationController
 
+before_action :authenticate_admin!
+
+
 	def top
 		@purchases = Purchase.select(:transaction_status)
+		# @purchases = Purchase.group(:transaction_status).count(:transaction_status)
 	end
 
 	def index
@@ -38,6 +42,9 @@ class Admin::PurchasesController < ApplicationController
 			transaction_status = "入金確認"
 		elsif params[:purchase][:transaction_status]=="3"
 			transaction_status = "商品発送済み"
+		elsif
+			@purchase.update(purchase_params)
+			redirect_back(fallback_location: root_path)
 		end
 
 		@purchase.update(purchase_params)
@@ -47,7 +54,7 @@ class Admin::PurchasesController < ApplicationController
 	private
 
 		def purchase_params
-			params.require(:purchase).permit(:transaction_status)
+			params.require(:purchase).permit(:transaction_status, :derivery_price)
 		end
 
 end

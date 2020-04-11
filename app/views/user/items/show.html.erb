@@ -1,12 +1,12 @@
 
+<h2>商品詳細</h2>
 
-<table>
-	<tr>
-		<td><%= attachment_image_tag @item, :image, size: "200x200" %></td>
-	</tr>
-</table>
+<div class="col-xs-2">
+	<div><%= attachment_image_tag @item, :image, size: "200x200" %></div>
+</div>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th>名前</th>
 		<td><%= @item.item_name %></td>
@@ -17,11 +17,20 @@
 	</tr>
 	<tr>
 		<th>値段</th>
-		<td><%= @item.price %></td>
+		<td><%= @item.price %>円</td>
 	</tr>
 </table>
 
-<%= link_to "購入", new_user_purchase_path(@item.id) %>
+<% if user_signed_in? %>
+
+<div class="kounyu">
+	<%= link_to "購入", new_user_purchase_path(@item), class: "btn btn-info" %>
+<% else %>
+<% end %>
+
+</div>
+
+</div>
 
 <%# link_to "購入", user_purchases_path(user_id:current_user, item_id: @item) %>
 

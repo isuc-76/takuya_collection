@@ -1,8 +1,10 @@
 <% if @purchases.present? %>
 
 <h2>購入履歴一覧</h2>
+<div class="col-xs-6">
 
-<table>
+
+<table class="table table-bordered">
 	<tr>
 		<th>商品画像</th>
 		<th>名前</th>
@@ -12,15 +14,19 @@
 	<% @purchases.each do |purchase| %>
 	<tr>
 		<td><%= attachment_image_tag purchase.item, :image, size: "100x100" %></td>
-		<td><%= link_to "#{purchase.item.item_name}", admin_purchase_path(purchase) %></td>
+		<td><%= link_to "#{purchase.item.item_name}", user_purchase_path(purchase) %></td>
 		<td><%= purchase.transaction_status %></td>
 	</tr>
 	<% end %>
 </table>
 
+<%= link_to"マイページに戻る", user_user_path(current_user), class: "btn btn-default" %>
+
 <% else %>
 
 <h2>購入履歴はありません</h2>
 
-<% end %>
+<%= link_to"マイページに戻る", user_user_path(current_user), class: "btn btn-default" %>
 
+<% end %>
+</div>

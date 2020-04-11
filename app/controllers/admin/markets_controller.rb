@@ -1,5 +1,8 @@
 class Admin::MarketsController < ApplicationController
 
+before_action :authenticate_admin!
+
+
 	def tukinomiya
 		@market = Market.find(1)
 	end

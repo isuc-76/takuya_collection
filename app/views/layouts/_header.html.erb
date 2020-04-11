@@ -3,9 +3,13 @@
 
 <% if admin_signed_in? %>
 
+	<p class="head-text">
+		<%= link_to"トップページ", admin_root_path %>
+	</p>
+
 	<ul class="header_top">
 		<li class="nav-list-item">
-			<%= link_to"ユーザー一覧", admin_users_path %>
+			<%= link_to"会員一覧", admin_users_path %>
 		</li>
 		<li class="nav-list-item">
 			<%= link_to"商品追加", new_admin_item_path %>
@@ -14,15 +18,22 @@
 			<%= link_to"商品一覧", admin_items_path %>
 		</li>
 		<li class="nav-list-item">
+			<%= link_to"購入状態一覧", admin_purchases_path %>
+		</li>
+		<li class="nav-list-item">
 			<%= link_to destroy_admin_session_path, method: :delete do %>ログアウト<% end %>
 		</li>
 	</ul>
 
 <% elsif user_signed_in? %>
 
+	<p class="head-text">
+		<%= link_to"トップページ", root_path %>
+	</p>
+
 	<ul class="header_top">
 		<li class="nav-list-item">
-			<%= link_to"ユーザー詳細", user_user_path(current_user) %>
+			<%= link_to"マイページ", user_user_path(current_user) %>
 		</li>
 		<li class="nav-list-item">
 			<%= link_to"標品一覧", user_items_path %>
@@ -33,6 +44,10 @@
 	</ul>
 
 <% else %>
+
+	<p class="head-text">
+		<%= link_to"トップページ", root_path %>
+	</p>
 
 	<ul class="header_top">
 		<li class="nav-list-item">

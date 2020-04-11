@@ -1,6 +1,14 @@
+<h2>購入状態一覧</h2>
 
+<div>
+	--<%= link_to "購入確定",admin_purchase_kakutei_path %>
+	--<%= link_to "請求書発送中",admin_purchase_seikyu_path %>
+	--<%= link_to "入金確認",admin_purchase_nyukin_path %>
+	--<%= link_to "発送済み",admin_purchase_hassouzumi_path %>--
+</div>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th>商品ID</th>
 		<th>名前</th>
@@ -17,4 +25,5 @@
 	</tr>
 	<% end %>
 </table>
+</div>
 

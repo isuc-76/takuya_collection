@@ -1,6 +1,8 @@
 class User::StoresController < ApplicationController
 
 	def top
+		@tukinomiya = Market.find(1)
+		@katori = Market.find(2)
 	end
 
 	def index

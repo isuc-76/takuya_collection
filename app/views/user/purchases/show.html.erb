@@ -1,13 +1,12 @@
 
 <h2>購入品詳細</h2>
 
-<table>
-	<tr>
-		<td><%= attachment_image_tag @purchase.item, :image, size: "200x200" %></td>
-	</tr>
-</table>
+<div class="col-xs-2">
+	<%= attachment_image_tag @purchase.item, :image, size: "200x200" %></td>
+</div>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th>名前</th>
 		<td><%= @purchase.item.item_name %></td>
@@ -18,10 +17,25 @@
 	</tr>
 	<tr>
 		<th>値段</th>
-		<td><%= @purchase.item.price %></td>
+		<td><%= @purchase.item.price %>円</td>
+	</tr>
+	<tr>
+		<th>送料</th>
+		<% if @purchase.derivery_price.present? %>
+		<td><%= @purchase.derivery_price %>円</td>
+		<% else %>
+		<td>未定</td>
+		<% end %>
 	</tr>
 	<tr>
 		<th>状態</th>
 		<td><%= @purchase.transaction_status %></td>
 	</tr>
 </table>
+
+<div class="modoru">
+	<%= link_to "一覧に戻る", user_purchases_path, class: "btn btn-default" %>
+</div>
+
+</div>
+

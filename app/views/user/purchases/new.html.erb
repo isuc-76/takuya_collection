@@ -1,4 +1,13 @@
-<table>
+
+<h2>購入確認</h2>
+
+<div class="col-xs-2">
+	<div><%= attachment_image_tag @item, :image, size: "200x200" %></div>
+</div>
+
+<div class="col-xs-6">
+
+<table class="table table-bordered">
 	<tr>
 		<th>名前</th>
 		<td><%= @item.item_name %></td>
@@ -7,10 +16,15 @@
 		<th>値段</th>
 		<td><%= @item.price %></td>
 	</tr>
+	<tr>
+		<th>送料</th>
+		<td>未定</td>
+	</tr>
 </table>
 
-<p>
-	
+<p class="tyui">
+	購入後、ご登録いただきましたメールアドレスに請求金額を送信致します。<br>
+	※確認の上、商品の金額＋送料を請求させていただきます。ご了承ください。
 </p>
 
 
@@ -20,7 +34,10 @@
 
 <%# form_for(@item, url:user_purchase_path(@item)) do |f| %>
     <%# f.hidden_field :selling_status, :value => false %>
-<%= f.submit "購入" %>
+<div class="kounyu">
+	<%= f.submit "購入確定",class: "btn btn-info" %>
+</div>
 
 <%# end %>
 <% end %>
+</div>
