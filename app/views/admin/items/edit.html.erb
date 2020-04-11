@@ -1,7 +1,9 @@
 
+<h2>商品編集</h2>
 
 <%= form_for @item, url: admin_item_path do |f| %>
 
+<div class="col-xs-6">
 <table>
 	<tr>
 		<th>商品画像</th>
@@ -10,11 +12,13 @@
 		<td><%= f.attachment_field :image %></td>
 	</tr>
 </table>
+</div>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th><%= @item.item_name %></th>
-		<td><%= f.text_area :item_name %></td>
+		<td><%= f.text_field :item_name %></td>
 	</tr>
 	<tr>
 		<th><%= @item.content %></th>
@@ -22,9 +26,10 @@
 	</tr>
 	<tr>
 		<th><%= @item.price %></th>
-		<td><%= f.text_area :price %></td>
+		<td><%= f.text_field :price %></td>
 	</tr>
 </table>
-<%= f.submit "保存" %>
+<%= f.submit "保存", class: "btn btn-info" %>
 <% end %>
+</div>
 

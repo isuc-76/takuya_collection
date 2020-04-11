@@ -1,5 +1,8 @@
 class User::UsersController < ApplicationController
 
+before_action :authenticate_user!
+before_action :correct_user, only: [:show, :edit, :update]
+
 	def show
 		@user = User.find(params[:id])
 	end
@@ -28,6 +31,13 @@ class User::UsersController < ApplicationController
 
 		def user_params
 			params.require(:user).permit(:name,:postal_code,:address,:telephone_number,:email,:deleted_at)
+		end
+
+		def correct_user
+			@user = User.find(params[:id])
+			if current_user != @user
+				redirect_back(fallback_location: root_path)
+			end
 		end
 
 end

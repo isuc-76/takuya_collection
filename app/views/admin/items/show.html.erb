@@ -1,12 +1,12 @@
 
+<h2>商品詳細</h2>
 
-<table>
-	<tr>
-		<td><%= attachment_image_tag @item, :image, size: "200x200" %></td>
-	</tr>
-</table>
+<div class="col-xs-2">
+<%= attachment_image_tag @item, :image, size: "200x200" %>
+</div>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th>名前</th>
 		<td><%= @item.item_name %></td>
@@ -31,4 +31,6 @@
 	</tr>
 </table>
 
-<%= link_to "編集", edit_admin_item_path(@item) %>
+<%= link_to "編集", edit_admin_item_path(@item), class: "btn btn-success" %>
+
+</div>

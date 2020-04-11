@@ -1,6 +1,10 @@
 
+<h2>商品一覧</h2>
 
-<table>
+<div class="col-xs-6">
+<% if @items.present? %>
+
+<table class="table table-bordered">
 	<tr>
 		<th>商品画像</th>
 		<th>名前</th>
@@ -13,5 +17,12 @@
 	</tr>
 	<% end %>
 </table>
+
+<% else %>
+
+<h2>出品中の商品はありません</h2>
+
+<% end %>
+</div>
 
 

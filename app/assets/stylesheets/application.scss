@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ /*bootstrapを適用*/
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 header {
@@ -51,6 +61,21 @@ li a {
 	margin: 0 20px
 }
 
-div sidebar {
+.sidebar {
 	border-right: 1px ;
+	height: 100vh;
+	background-color: #C0C0C0;
+	text-align: center;
+}
+
+.side-p {
+	margin-top:400px;
+}
+
+table {
+	text-align: center;
+}
+
+th {
+	text-align: center;
 }

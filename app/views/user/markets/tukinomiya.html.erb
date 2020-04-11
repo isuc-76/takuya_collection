@@ -1,23 +1,68 @@
 
-<%= render 'layouts/sidebar' %>
 
+<h1>浦和宿ふるさと市開催地情報</h1>
 
-<h1>tukinomiya</h1>
-
-
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
-		<th>
+		<th class="market-th">開催日</th>
+		<td>
 			<%= @tukinomiya.day %>
-		</th>
+		</td>
 	</tr>
 	<tr>
-		<th>
+		<th>概要</th>
+		<td>
 			<%= @tukinomiya.content %>
-		</th>
+		</td>
 	</tr>
 	<tr>
-		<th>
-		</th>
+		<th>時間</th>
+		<td>
+			7:00～15:30　※片付けの時間が早まる場合がございます。
+		</td>
+	</tr>
+	<tr>
+		<th>会場</th>
+		<td>
+			調（つきのみや）公園（埼玉県さいたま市浦和区岸町３-１７）
+		</td>
+	</tr>
+	<tr>
+		<th>入場料</th>
+		<td>
+			無料
+		</td>
+	</tr>
+	<tr>
+		<th>出店数</th>
+		<td>
+			120店
+		</td>
+	</tr>
+	<tr>
+		<th>主催</th>
+		<td>
+			浦和宿ふるさと市実行委員会
+		</td>
+	</tr>
+	<tr>
+		<th>協力</th>
+		<td>
+			地元商店会・コルソ骨董市･香取神社骨董市
+		</td>
+	</tr>
+	<tr>
+		<th>後援</th>
+		<td>
+			さいたま市・公益社団法人さいたま観光国際協会・一般社団法人埼玉県物産観光協会
+		</td>
+	</tr>
+	<tr>
+		<th>お問い合わせ</th>
+		<td>
+			048-875-5156［当日会場：090-8846-5800］ ※ご注意：日程・時間・場所などは、天候や諸事情により変更される場合があります。
+		</td>
 	</tr>
 </table>
+</div>

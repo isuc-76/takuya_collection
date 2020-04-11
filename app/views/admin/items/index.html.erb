@@ -1,8 +1,11 @@
 
+<h2>商品一覧</h2>
 
-<table>
+<div class="col-xs-6">
+<table class="table table-bordered">
 	<tr>
 		<th>商品ID</th>
+		<th>画像</th>
 		<th>名前</th>
 		<th>状態</th>
 	</tr>
@@ -10,6 +13,7 @@
 	<% @items.each do |item| %>
 	<tr>
 		<td><%= item.id %></td>
+		<td><%= attachment_image_tag item, :image, size: "100x100" %></td>
 		<td><%= link_to "#{item.item_name}", admin_item_path(item) %></td>
 		<td>
 			<% if item.selling_status==true %>
@@ -21,4 +25,5 @@
 	</tr>
 	<% end %>
 </table>
+</div>
 
