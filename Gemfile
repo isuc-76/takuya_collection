@@ -84,11 +84,11 @@ gem 'rails-i18n'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 
+#デバッグ
+gem 'pry-byebug'
+
 # MySQL
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
 end
-
-#デバッグ
-gem 'pry-byebug'
