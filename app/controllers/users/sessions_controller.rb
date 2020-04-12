@@ -2,6 +2,7 @@
 
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+  # before_action :correct_status, only: [:new, :create]
 
   # GET /resource/sign_in
   def new
@@ -14,11 +15,18 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   # DELETE /resource/sign_out
-  def destroy
-    super
-  end
+  # def destroy
+  #   super
+  # end
 
   protected
+
+  # def correct_status
+  #   @user = User.find(params[:id])
+  #   if @user.user_status = false
+  #     redirect_to new_user_registration_path
+  #   end
+  # end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params

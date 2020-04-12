@@ -26,7 +26,8 @@ User.create!(
 			postal_code:"000-0000",
 			address:"千葉",
 			email:"1@1",
-			password:"111111"
+			password:"111111",
+			user_status:true
 		},
 		{
 			name:"インド",
@@ -34,7 +35,8 @@ User.create!(
 			postal_code:"222-2222",
 			address:"滋賀",
 			email:"2@2",
-			password:"222222"
+			password:"222222",
+			user_status:true
 		}
 	]
 	)
@@ -81,6 +83,7 @@ Store.create!(
 # 		}
 # 	]
 # 	)
+
 
 
 # Purchase.create!(

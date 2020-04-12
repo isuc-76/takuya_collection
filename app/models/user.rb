@@ -22,9 +22,14 @@ class User < ApplicationRecord
          validates :user_status,
          inclusion: { in: [true, false] }
 
-         acts_as_paranoid
+         # acts_as_paranoid
 
          has_many :purchases
+
+  #論理削除
+  def active_for_authentication?
+    super && user_status
+  end
 
 
 end

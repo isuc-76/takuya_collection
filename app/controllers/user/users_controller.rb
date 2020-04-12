@@ -22,15 +22,16 @@ before_action :correct_user, only: [:show, :edit, :update]
 	end
 
 	def destroy
-		User.find(params[:id]).destroy
-		flash[:success]="退会しました"
+		p "削除"
+		user = User.find(params[:id])
+		user.update(user_params)
 		redirect_to root_path
 	end
 
 	private
 
 		def user_params
-			params.require(:user).permit(:name,:postal_code,:address,:telephone_number,:email,:deleted_at)
+			params.require(:user).permit(:name,:postal_code,:address,:telephone_number,:email,:user_status)
 		end
 
 		def correct_user

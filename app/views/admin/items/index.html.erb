@@ -1,4 +1,6 @@
 
+<% if @items.present? %>
+
 <h2>商品一覧</h2>
 
 <div class="col-xs-6">
@@ -26,4 +28,12 @@
 	<% end %>
 </table>
 </div>
+
+<%= paginate @items %>
+
+<% else %>
+
+<h2>登録されている商品はありません</h2>
+
+<% end %>
 
