@@ -40,7 +40,7 @@ before_action :correct_purchase, only:[:show]
 	# end
 
 	def index
-		@purchases = Purchase.where(user_id: current_user.id)
+		@purchases = Purchase.where(user_id: current_user.id).page(params[:page]).per(4)
 	end
 
 	def show

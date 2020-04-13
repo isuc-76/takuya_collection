@@ -1,7 +1,7 @@
 class User::ItemsController < ApplicationController
 
 	def index
-		@items = Item.where(selling_status: true)
+		@items = Item.where(selling_status: true).page(params[:page]).per(4)
 	end
 
 	def show

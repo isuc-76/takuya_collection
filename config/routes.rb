@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   namespace :user do
   	resources :users, only: [:show, :edit, :update, :destroy]
-  	resources :items, only: [:index, :show, :update] do
+  	resources :items, only: [:index, :show] do
   		resources :item_questions, only: [:new, :create, :index]
   	end
   	resources :purchases, only: [:new, :create, :index, :show, :update]

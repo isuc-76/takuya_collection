@@ -9,23 +9,23 @@ before_action :authenticate_admin!
 	end
 
 	def index
-		@purchases = Purchase.all
+		@purchases = Purchase.page(params[:page]).per(8)
 	end
 
 	def kakutei
-		@purchases = Purchase.where(transaction_status: 0)
+		@purchases = Purchase.where(transaction_status: 0).page(params[:page]).per(8)
 	end
 
 	def seikyu
-		@purchases = Purchase.where(transaction_status: 1)
+		@purchases = Purchase.where(transaction_status: 1).page(params[:page]).per(8)
 	end
 
 	def nyukin
-		@purchases = Purchase.where(transaction_status: 2)
+		@purchases = Purchase.where(transaction_status: 2).page(params[:page]).per(8)
 	end
 
 	def hassouzumi
-		@purchases = Purchase.where(transaction_status: 3)
+		@purchases = Purchase.where(transaction_status: 3).page(params[:page]).per(8)
 	end
 
 	def show
