@@ -1,4 +1,5 @@
 
+<% if @users.present? %>
 
 <div class="admin_user_index">
 
@@ -26,7 +27,18 @@
 	</tr>
 	<% end %>
 </table>
+
+<div class="col-xs-6">
+	<%= paginate (@users) %>
 </div>
+
+</div>
+
+<% else %>
+
+<h2>登録されている会員はいません</h2>
+
+<% end %>
 
 
 </div>

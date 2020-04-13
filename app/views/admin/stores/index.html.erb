@@ -1,22 +1,21 @@
 
 
-<h1>admin.store</h1>
+<h2>コメント編集</h2>
 
+<div class="col-xs-6">
 <%= form_for(@store,url:admin_store_path(@store)) do |f| %>
-<table>
+<table class="table table-bordered">
 	<tr>
-		<th>
-			<%= @store.comment %>
-		</th>
+		<td>現在のコメント:<%= @store.comment %></td>
 	</tr>
 	<tr>
-		<th>
-			<%= f.label :コメント %>
+		<td>
 			<%= f.text_area :comment %>
 			<%= f.submit "編集" %>
-		</th>
+		</td>
 	</tr>
 </table>
 <% end %>
+</div>
 
 

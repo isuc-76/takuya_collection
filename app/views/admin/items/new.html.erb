@@ -1,9 +1,9 @@
 
+<%= render "shared/error_messages", model: @item %>
+
 <h2>商品登録</h2>
 
 <%= form_for @item, url: admin_items_path do |f| %>
-
-<%= render "shared/error_messages",model: @item %>
 
 <div class="col-xs-6">
 <table>

@@ -1,33 +1,30 @@
 
+<%= render "shared/error_messages", model: @market %>
 
-<h1>admin.tukinomiya</h1>
+<h1>浦和宿ふるさと市</h1>
 
-
+<div class="col-xs-6">
 <%= form_for(@market,url:admin_market_path(@market)) do |f| %>
-<table>
+<table class="table table-bordered">
 	<tr>
-		<th>
-			<%= @market.day %>
-		</th>
+		<th>開催日</th>
 	</tr>
 	<tr>
-		<th>
-			<%= f.label :開催日 %>
+		<td>
+			現在の内容:<%= @market.day %><br>
 			<%= f.text_area :day %>
 			<%= f.submit "編集" %>
-		</th>
+		</td>
 	</tr>
 	<tr>
-		<th>
-			<%= @market.content %>
-		</th>
+		<th>概要</th>
 	</tr>
 	<tr>
-		<th>
-			<%= f.label :説明 %>
+		<td>
+			現在の内容:<%= @market.content %><br>
 			<%= f.text_area :content %>
 			<%= f.submit "編集" %>
-		</th>
+		</td>
 	</tr>
 	<tr>
 		<th>
@@ -35,3 +32,4 @@
 	</tr>
 </table>
 <% end %>
+</div>
