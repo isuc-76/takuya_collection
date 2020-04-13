@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    models:
+      item: 商品
+      market: お客さま情報
+      store: 商品
+      user: 配送先
+    attributes:
+      item:
+        item_name: 商品名
+        content: 説明
+        image: 画像
+        price: 値段
+      market:
+        day: 郵便番号
+        content: 住所
+      store:
+        comment: コメント
+      user:
+        name: 名前
+        telephone_number: 電話番号
+        email: メールアドレス
+        postal_code: 郵便番号
+        address: 住所
+        password: パスワード
+

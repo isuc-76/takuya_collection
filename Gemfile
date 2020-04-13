@@ -87,6 +87,9 @@ gem 'jquery-rails'
 #デバッグ
 gem 'pry-byebug'
 
+#日本語化
+gem 'rails-i18n'
+
 # MySQL
 gem 'dotenv-rails'
 group :production do
