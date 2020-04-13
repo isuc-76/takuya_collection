@@ -10,7 +10,7 @@ class User < ApplicationRecord
          format: {
          	with: /\A[ぁ-んァ-ン一-龥]/,
          	allow_blank: true,
-         	message: "アルファベットは使用できません"
+         	message: "には、数字やアルファベットは使用できません"
          }
 
          validates :telephone_number, presence: true

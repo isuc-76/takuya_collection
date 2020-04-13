@@ -28,6 +28,10 @@ before_action :correct_user, only: [:show, :edit, :update]
 		redirect_to root_path
 	end
 
+	def taikai
+		@user = current_user
+	end
+
 	private
 
 		def user_params

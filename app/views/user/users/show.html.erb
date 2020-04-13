@@ -34,10 +34,10 @@
 
 
 	<%# form_for(@user,url:user_users_path(@user)) do |f| %>
-	<%= form_for(@user,url:user_user_path(@user), html: {method: "delete"}) do |f| %>
-		<%= f.hidden_field :user_status, :value => false %>
-		<%= f.submit "退会", class: "btn btn-danger" %>
-	<% end %>
+	<%# form_for(@user,url:user_user_path(@user), html: {method: "delete"}) do |f| %>
+		<%# f.hidden_field :user_status, :value => false %>
+		<%# f.submit "退会", class: "btn btn-danger" %>
+	<%# end %>
 
 	<%# link_to"退会する", user_user_path(current_user), method: :delete, class: "btn btn-danger" %>
 

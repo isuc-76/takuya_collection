@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
   namespace :user do
   	resources :users, only: [:show, :edit, :update, :destroy]
+    get "taikai" => "users#taikai"
   	resources :items, only: [:index, :show] do
   		resources :item_questions, only: [:new, :create, :index]
   	end
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
 
     get "/tukinomiya" => "markets#tukinomiya"
     get "/katori" => "markets#katori"
+
 
   end
 

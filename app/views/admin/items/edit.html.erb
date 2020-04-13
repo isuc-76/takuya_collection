@@ -19,16 +19,29 @@
 <div class="col-xs-6">
 <table class="table table-bordered">
 	<tr>
-		<th><%= @item.item_name %></th>
+		<th>商品名:<%= @item.item_name %></th>
 		<td><%= f.text_field :item_name %></td>
 	</tr>
 	<tr>
-		<th><%= @item.content %></th>
+		<th>説明:<%= @item.content %></th>
 		<td><%= f.text_area :content %></td>
 	</tr>
 	<tr>
-		<th><%= @item.price %></th>
+		<th>値段:<%= @item.price %>円</th>
 		<td><%= f.text_field :price %></td>
+	</tr>
+	<tr>
+		<th>状態</th>
+		<td>
+			<% if @item.selling_status==true %>
+				<p>販売中</p>
+				<%= f.hidden_field :selling_status, :value => false %>
+				<%= f.submit "出品をやめる", class: "btn btn-danger" %><br>
+			<p>（※状態が売却済みになります、この操作は取り消せません。）</p>
+			<% else %>
+				<P>売却済み</P>
+			<% end %>
+		</td>
 	</tr>
 </table>
 <%= f.submit "保存", class: "btn btn-info" %>

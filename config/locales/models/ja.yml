@@ -2,9 +2,9 @@ ja:
   activerecord:
     models:
       item: 商品
-      market: お客さま情報
-      store: 商品
-      user: 配送先
+      market: 市
+      store: 拓也コレクション
+      user: 会員情報
     attributes:
       item:
         item_name: 商品名

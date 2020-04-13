@@ -1,0 +1,16 @@
+<h2>退会確認</h2>
+
+<div class="col-xs-6">
+	<p>退会すると、商品の購入ができなくなります。</p>
+
+	<div class="kakunin">
+	<p>退会しますか？</p>
+
+	<%= form_for(@user,url:user_user_path(@user), html: {method: "delete"}) do |f| %>
+		<%= f.hidden_field :user_status, :value => false %>
+		<%= f.submit "退会", class: "btn btn-danger" %>
+	<% end %>
+
+	<%= link_to "トップページに戻る", root_path %>
+	</div>
+</div>
