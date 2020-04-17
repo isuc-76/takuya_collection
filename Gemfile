@@ -81,7 +81,7 @@ gem 'paranoia'
 # rails日本語化
 gem 'rails-i18n'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 
 #デバッグ
